@@ -22,9 +22,9 @@
 			</div>
 			<a class='navbar-brand' href='/' ng-bind='appname'></a>
 			<div class='collapse navbar-collapse' id='navbar-links'>
-				<ul class='nav navbar-nav'>
-					<li ng-class='active:"active"' ng-repeat='link in navlinks'>
-						<a ng-href='link.href' ng-bind='link.text'></a>
+				<ul class='nav navbar-nav pull-right'>
+					<li ng-class='{active:active}' ng-repeat='link in navlinks'>
+						<a ui-sref='{{link.href}}' ng-bind='link.text'></a>
 					</li>
 				</ul>
 				<!-- search bar : if needed
@@ -37,7 +37,7 @@
 			</div>
 		</div>
 	</header>
-	<div class='container'>
+	<div class='container' ui-view>
 		
 	</div>
 
